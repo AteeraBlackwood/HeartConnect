@@ -1,0 +1,270 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #ff759f;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  font-size: 14px;
+  padding-left: 15%;
+  width: 100vw;
+}
+
+li {
+  float: left;
+  font-family: 'Great Vibes' ;
+  font-size: 14px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+
+.Title {
+  font-family: 'Great Vibes' ;
+  font-size: 100px;
+  color: #ab0000;
+  display: flex;
+ align-items: center;
+
+}
+
+.Title > img{
+  width: 200px;
+  height: 290px;
+}
+
+.TitleSmall {
+  font-family: 'Great Vibes' ;
+  font-size: 50px;
+  color: #ab0000;
+  display: flex;
+  align-items: center;
+
+}
+
+.TitleSmall > img{
+  width: 100px;
+  height: 190px;
+}
+
+.Ad1{
+  background-image: url('Ad1.jpg');
+  /* background-size: contain; */
+background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+
+}
+.Ad2{
+  background-image: url('Ad2.jpg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad3{
+  background-image: url('Ad3.jpeg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad4{
+  background-image: url('Ad4.jpg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad5{
+  background-image: url('Ad5.png');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad6{
+  background-image: url('Ad6.jpg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad7{
+  background-image: url('Ad7.jpg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+.Ad8{
+  background-image: url('Ad8.jpg');
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  position: fixed;
+  top: 0px;
+  height: 100vh;
+  width: 15%;
+}
+
+.centerContent{
+  padding: 20vw;
+  /* align-content: center; */
+}
+
+.Footer{
+  color: white;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: black;
+  /* //height: 5%; */
+  position: relative;
+  bottom: 0px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+
+.Footer > p{
+  display: flex;
+  padding: 15px;
+}
+
+.Accountbox{
+padding-left: 20% ;
+padding-right: 20% ;
+text-align: left;
+font-family: Helvetica;
+font-weight: bold;
+font-size: 16px ;
+background-color: #499AB3;
+border: 5px outset red;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+.dropdown{
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.Questionnaire{
+padding-left: 20% ;
+padding-right: 20% ;
+text-align: left;
+font-family: Helvetica;
+font-weight: bold;
+font-size: 16px ;
+background-color: #499AB3;
+border: 5px outset red;
+}
+
+.Profile{
+  display: grid;
+  padding-left: 10% ;
+  padding-right: 10% ;
+  text-align: left;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 16px ;
+  background-color: #499AB3;
+  border: 5px outset red;
+  grid-column: 3;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.Profilepic{
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.Profilepic > img{
+  width: auto;
+  height: 100%;
+}
+
+.Name{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.Detailbox1{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.Detailbox2{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.CriminalRecord{
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.Lookingfor{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+.SocialMedia{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+}
+.SocialMedia > img{
+  display: inline;
+  margin-right: 15%;
+  height: 100px;
+  width: 100px;
+}
+
+.Gallery{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 6;
+}

@@ -1,0 +1,105 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="NavBar">
+    <ul>
+      <li><a class="active" href="homepage.html">Home</a></li>
+      <li><a href="questionnaire.html">Sample Questionnaire</a></li>
+      <li><a href="makeaccount.html">Create an Account</a></li>
+      <li><a href="profile.html">Your Profile</a></li>
+    </ul>
+  </div>
+  <div class="Ad3">
+
+  </div>
+  <div class="centerContent">
+  <div class="TitleSmall">
+    <h1>HeartConnect</h1>
+    <img src="Heart Symbol.png" alt="Symbol">
+  </div>
+  <div class="Accountbox">
+    <form action="/action_page.php">
+      <label for="fname">First name: </label>
+      <input type="text" id="fname" name="fname"><br><br>
+      <label for="lname">Last name: </label>
+      <input type="text" id="lname" name="lname"><br><br>
+      <label for="address">Address: </label>
+      <input type="text" id="address" name="address"><br><br>
+
+      <div class="Address">
+      <label for="city">City: </label>
+      <input type="text" id="city" name="city"><br><br>
+      <label for="country">Country: </label>
+      <input type="text" id="country" name="country"><br><br>
+      <label for="zip">Zip Code: </label>
+      <input type="text" id="zipcode" name="zipcode"><br><br>
+      </div>
+
+      <div class="dropdown">
+      <label for="genders">Gender:</label>
+      <select name="genders" id="genders">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="transman">Transman</option>
+        <option value="transwoman">Transwoman</option>
+        <option value="nonbinary">Nonbinary</option>
+      </select>
+        </div>
+
+      <div class="dropdown-content">
+      <label for="lookingfor">Looking for:</label>
+      <select name="lookingfor" id="lookingfor">
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="transman">Transman</option>
+      <option value="transwoman">Transwoman</option>
+      <option value="nonbinary">Nonbinary</option>
+      <option value="all">All of the Above</option>
+    </select>
+      </div>
+      <!-- </div> -->
+
+      <label for="ssn">Social Security Number: </label>
+      <input type="text" id="ssn" name="ssn"><br><br>
+      <label for="q1">Mother's Maiden Name: </label>
+      <input type="text" id="q1" name="q1"><br><br>
+      <label for="q2">First Pet: </label>
+      <input type="text" id="q2" name="q2"><br><br>
+      <label for="q3">Childhood Street Name: </label>
+      <input type="text" id="q3" name="q3"><br><br>
+      <form action="/action_page.php">
+      <input type="checkbox" id="Consent" name="Consent" value="Consent">
+      <label for="Consent"> I understand that by signing up, you are agreeing to our terms and conditions, which remove your right to sue us and gives us access to all of your personal information.
+</label><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <div class="Footer">
+    <div class="Languages">
+      <h1>Languages(Coming Soon)</h1>
+      <p>English</p>
+      <p>Spanish</p>
+      <p>Chinese Mandarin</p>
+    </div>
+    <div class="RemoveAds">
+      <button onclick="adsStay()">Want to remove ads?</button>
+    </div>
+    <div class="Copyright">
+      <p>Copyright HeartConnect 2021</p>
+    </div>
+  </div>
+</div>
+<div class="Ad4">
+
+</div>
+
+  <script src="script.js" charset="utf-8"></script>
+  </body>
+</html>
