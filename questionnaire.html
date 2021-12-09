@@ -6,6 +6,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+    let pageName ="questionnaire";
+    </script>
   </head>
   <body>
   <div class="NavBar">
@@ -16,9 +19,6 @@
       <li><a href="profile.html">Your Profile</a></li>
     </ul>
   </div>
-  <div class="Ad7">
-
-  </div>
     <div class="centerContent">
     <div class="TitleSmall">
       <h1>HeartConnect</h1>
@@ -26,16 +26,16 @@
     </div>
     <div class="Questionnaire">
       <h1>Please answer a few of these questions. They'll help us match you to your perfect person!</h1>
-      <ol>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+      <ol id="questionList">
+
       </ol>
+      <div class="Response">
+        <input type="text" id="textboxid">
+        <input type="submit" value="Submit" id="subdes">
+      </div>
 
     </div>
-    <div class="Footer">
+    <div class="HomeFooter">
       <div class="Languages">
         <h1>Languages(Coming Soon)</h1>
         <p>English</p>
@@ -50,12 +50,13 @@
       </div>
     </div>
   </div>
+  <div class="Ad7">
+
+  </div>
   <div class="Ad8">
 
   </div>
 
-  <script src="script.js" charset="utf-8">
-  let pageName ="questionnaire.html"
-  </script>
+  <script src="script.js" charset="utf-8"></script>
   </body>
 </html>

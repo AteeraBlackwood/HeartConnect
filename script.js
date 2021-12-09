@@ -1,23 +1,10 @@
 //Homepage stuff
+let happyCouplesElement = document.getElementById('HappyCouples');
+
+
 let happyCouples = [
-  "HC1.jpg", "HC2.jpg", "HC3.jpg","HC4.jpg","HC5.jpg","HC6.jpg","HC7.jpg","HC8.jpg","HC9.jpg"
+  "HC1.jpg", "HC2.jpg", "HC3.jpg", "HC4.jpg", "HC5.jpg", "HC6.jpg", "HC7.jpg", "HC8.jpg", "HC9.jpg"
 ]
-
-// new Glide('.glide').mount();
-//Get help fixing the slideshow
-
-for (var i = 0; i < happyCouples.length; i++) {
-  createElementProper(happyCouples[i]);
-}
-
-function createElementProper(happyCouples){
-  let newContentListItem = document.createElement("LI");
-  newContentListItem.classList.add("glide__slide");
-  let newImage = document.createElement("IMG");
-  newImage.classList.add("albumImage");
-  newImage.src = happyCouples['Couples'];
-  newContentListItem.appendChild(newImage);
-}
 
 //Questionnaire stuff
 let questions = [
@@ -52,11 +39,106 @@ let questions = [
   "What would you prefer your ideal match to be more into?",
   "Are you religious? If so, what religion are you?",
   "How would someone be able to ruin your life?"
-]
+];
 
-function createElementProper(incomingArray){
-  let qs = document.createElement("LI");
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  if (pageName == "homepage") {
+    console.log("Loading the homepage...");
+    for (var i = 0; i < happyCouples.length; i++) {
+      console.log("Attempting to create couple slide...");
+      createElementProper(happyCouples[i]);
+    }
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 3,
+      focusAt: 'center'
+    }).mount()
+  }
+
+  else if (pageName == "questionnaire") {
+    // First we shuffle the questions randomly
+    questions = shuffle(questions);
+
+    // Next, we create five questions on the page
+    for (var i = 0; i < 5; i++) {
+      createQuestion(questions[i]);
+    }
+
+  }
+  else if (pageName == "profile") {
+
+    let n1 = document.getElementById("name");
+    n1.innerText = names[Math.floor(Math.random() * names.length)];
+
+    let d1 = document.getElementById("age");
+    d1.innerText = age[Math.floor(Math.random() * age.length)];
+
+    let d2 = document.getElementById("gender");
+    d2.innerText = gender[Math.floor(Math.random() * gender.length)];
+
+    let d3 = document.getElementById("occupation");
+    d3.innerText = occupation[Math.floor(Math.random() * occupation.length)];
+
+    let d4 = document.getElementById("likes");
+    d4.innerText = likes[Math.floor(Math.random() * likes.length)];
+
+    let d5 = document.getElementById("location");
+    d5.innerText = residence[Math.floor(Math.random() * residence.length)];
+
+    let d6 = document.getElementById("cs");
+    d6.innerText = creditscore[Math.floor(Math.random() * creditscore.length)];
+
+    let d7 = document.getElementById("dislikes");
+    d7.innerText = dislikes[Math.floor(Math.random() * dislikes.length)];
+
+    let lf = document.getElementById("preferences");
+    lf.innerText = preferences[Math.floor(Math.random() * preferences.length)];
+
+    console.log("Loading the profile...");
+    for (var i = 0; i < gPics.length; i++) {
+      console.log("Attempting to create couple slide...");
+      createElementProper(gPics[i]);
+    }
+    new Glide('.glide', {
+      type: 'carousel',
+      perView: 5,
+      focusAt: 'center'
+    }).mount()
+  }
+
+});
+
+function createQuestion(incomingQuestionText) {
+  let questionListElement = document.getElementById("questionList");
+
+  let newQuestionListItem = document.createElement("LI");
+  newQuestionListItem.innerText = incomingQuestionText;
+  questionListElement.appendChild(newQuestionListItem);
 }
+
+// NOTE: We can't use the same name for a function parameter as an existing variable (your array)
+// function createElementProper(happyCouples) {
+function createElementProper(incomingCoupleImage) {
+  console.log("Adding couple...");
+  let newContentListItem = document.createElement("LI");
+  newContentListItem.classList.add("glide__slide");
+  let newImage = document.createElement("IMG");
+  newImage.classList.add("albumImage");
+  // NOTE: We are passing the URL of the image– no need to use the array and an index
+  // newImage.src = happyCouples[i];
+  newImage.src = incomingCoupleImage;
+  newContentListItem.appendChild(newImage);
+  // NOTE: Need to append this newContentListItem to the page:
+  happyCouplesElement.appendChild(newContentListItem);
+}
+
+
+// NOTE: We had two functions named "createElementProper" – we can only use a function name once.
+// function createElementProper(incomingArray) {
+//   let qs = document.createElement("LI");
+// }
 
 // var lists = document.getElementById('qs');
 // lists.innerHTML = questions[Math.floor(Math.random() * questions.length)];
@@ -84,19 +166,32 @@ function adsStay() {
 //Use grid or slid.js for Gallery
 var outputParagraph;
 
-var age = ['18','28','52','943','20','33','75','60','45','91']
-var occupation = ['Actor', 'Onlyfans Contributor','Stripper','Lawyer','Professional Fool','Hitman','Detective','Romance Novelist','Grape Farmer','Teacher','Executioner','Army Pilot','Runescape Player','Artist(Starving)','Cashier','Professional Poker Player']
-var creditscore = ['280','750','810','420','666','696','517','312','12']
-var location = ['San Francisco -California', 'New York - New York','Owasso - Oklahoma','London - England','Dublin - Ireland', 'Flint - Michigan', 'Denver - Colorado', 'Toronto - Ontario', 'Sleepy Hollow - New York', 'Whynot - Mississippi']
-var likes = ['cougars','dancing','toes','long walks on the beach','cars','animals','drinking','reality tv','homespun clothing','The Spanish Inquisition','collecting teeth','shoplifting','The Office','spending time with family','home improvement','competitive eating','duck hunting']
-var dislikes = ['milfs', 'my mother who failed me', 'children', 'fitness', 'country music', 'long walks on the beach', 'the British', 'the Irish','cetaceans','homes with popcorn ceilings', 'raffles','American Revisionism']
-var preferences = ["a Male", "a Female", " a Transman", "a Transman", "a Nonbinary person", "any and everything"]
+var age = ['18', '28', '52', '943', '20', '33', '75', '60', '45', '91']
+var occupation = ['Actor', 'Onlyfans Contributor', 'Stripper', 'Lawyer', 'Professional Fool', 'Hitman', 'Detective', 'Romance Novelist', 'Grape Farmer', 'Teacher', 'Executioner', 'Army Pilot', 'Runescape Player', 'Artist(Starving)', 'Cashier', 'Professional Poker Player']
+var creditscore = ['280', '750', '810', '420', '666', '696', '517', '312', '12']
+//var location = ['San Francisco - California', 'New York - New York','Owasso - Oklahoma','London - England','Dublin - Ireland', 'Flint - Michigan', 'Denver - Colorado', 'Toronto - Ontario', 'Sleepy Hollow - New York', 'Whynot - Mississippi']
+var residence = ['San Francisco - California', 'New York - New York','Owasso - Oklahoma','London - England','Dublin - Ireland', 'Flint - Michigan', 'Denver - Colorado', 'Toronto - Ontario', 'Sleepy Hollow - New York', 'Whynot - Mississippi']
+var likes = ['cougars', 'dancing', 'toes', 'long walks on the beach', 'cars', 'animals', 'drinking', 'reality tv', 'homespun clothing', 'The Spanish Inquisition', 'collecting teeth', 'shoplifting', 'The Office', 'spending time with family', 'home improvement', 'competitive eating', 'duck hunting']
+var dislikes = ['milfs', 'my mother who failed me', 'children', 'fitness', 'country music', 'long walks on the beach', 'the British', 'the Irish', 'cetaceans', 'homes with popcorn ceilings', 'raffles', 'American Revisionism']
+var preferences = ["a Male", "a Female", " a Transwoman", "a Transman", "a Nonbinary person", "any and everything"]
+var gender = ["Male", "Female", "Transwoman", "Transman", "Nonbinary"]
+var names =['Tabatha Mullen', 'Brett Joseph','Jill Laing','Vincenzo Childs','Avani Felix','Emaan Tillman','Hadassah Hensley',"Scarlett O'hara",'Sidra Novak','Bryan Timms','Harvey-Lee Lees','Rin Tosaka']
 
-// document.addEventListener("DOMContentLoaded", function(){
-d1 = document.getElementById("age");
-d1.innerHTML = age[Math.floor(Math.random() * age.length)];
 
-function gender(){
-  var genderIndex = Math.floor(Math.random()*preferences.length);
-  outputParagraph.innerHTML = preferences[genderIndex];
+// function gender() {
+//   var genderIndex = Math.floor(Math.random() * preferences.length);
+//   outputParagraph.innerText = preferences[genderIndex];
+// }
+
+
+/* A function for shuffling arrays */
+function shuffle (arr) {
+    var j, x, index;
+    for (index = arr.length - 1; index > 0; index--) {
+        j = Math.floor(Math.random() * (index + 1));
+        x = arr[index];
+        arr[index] = arr[j];
+        arr[j] = x;
+    }
+    return arr;
 }
