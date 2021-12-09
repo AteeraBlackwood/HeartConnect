@@ -198,6 +198,7 @@ background-size: 100% 100%;
 .Accountbox{
 padding-left: 20% ;
 padding-right: 20% ;
+padding-top: 15px;
 text-align: left;
 font-family: Helvetica;
 font-weight: bold;
@@ -223,6 +224,10 @@ font-weight: bold;
 font-size: 16px ;
 background-color: #499AB3;
 border: 5px outset red;
+}
+.Questionnaire > #questionList{
+  font-family: Helvetica;
+  font-weight: bold;
 }
 .Response{
   padding-bottom: 30px;

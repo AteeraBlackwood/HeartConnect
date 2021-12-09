@@ -65,6 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
     for (var i = 0; i < 5; i++) {
       createQuestion(questions[i]);
     }
+   if (pageName == "makeaccount") {
+    if (submit = true) {
+      alert("Thank you! Welcome to her HeartConnect community!");
+    }
+  }
 
   }
   else if (pageName == "profile") {
@@ -135,6 +140,8 @@ function createElementProper(incomingCoupleImage) {
 }
 
 
+
+
 // NOTE: We had two functions named "createElementProper" – we can only use a function name once.
 // function createElementProper(incomingArray) {
 //   let qs = document.createElement("LI");
@@ -158,6 +165,9 @@ function myFunction() {
 function adsStay() {
   alert("Blocking the ads isn't allowed! Because of this, we've also disabled your adblock as soon as you came on the website!");
 }
+// function subdes() {
+//   alert("Thank you! Welcome to her HeartConnect community!");
+// }
 //Need to make a pop up for the footer about the ads and for submission
 
 
