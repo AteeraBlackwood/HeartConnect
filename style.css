@@ -6,7 +6,7 @@ body{
   background-color: #ff759f;
 }
 
-ul {
+ ul {
   list-style-type: none;
   margin: 0;
   /* padding: 0; */
@@ -17,7 +17,7 @@ ul {
   width: 100vw;
 }
 
-li {
+.navBar li {
   display: inline;
   font-family: 'Great Vibes' ;
   font-size: 30px;
@@ -228,6 +228,7 @@ border: 5px outset red;
 .Questionnaire > #questionList{
   font-family: Helvetica;
   font-weight: bold;
+  font-size: 22px;
 }
 .Response{
   padding-bottom: 30px;

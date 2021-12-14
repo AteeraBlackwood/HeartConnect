@@ -64,14 +64,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Next, we create five questions on the page
     for (var i = 0; i < 5; i++) {
       createQuestion(questions[i]);
+       response();
+     }
     }
    if (pageName == "makeaccount") {
-    if (submit = true) {
+    if (mouseClicked(subdes) = true) {
       alert("Thank you! Welcome to her HeartConnect community!");
     }
   }
 
-  }
+
   else if (pageName == "profile") {
 
     let n1 = document.getElementById("name");
@@ -121,6 +123,12 @@ function createQuestion(incomingQuestionText) {
   let newQuestionListItem = document.createElement("LI");
   newQuestionListItem.innerText = incomingQuestionText;
   questionListElement.appendChild(newQuestionListItem);
+}
+
+function response() {
+  let textresponse = document.createElement("TEXT");
+  textresponse.setAttribute("type", "text");
+  document.body.appendChild(textresponse);
 }
 
 // NOTE: We can't use the same name for a function parameter as an existing variable (your array)
